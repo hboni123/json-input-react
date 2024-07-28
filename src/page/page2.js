@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './page2.css';
+import Navbar from '../components/Navbar';
 
 const Page2 = () => {
     const [jsonInput, setJsonInput] = useState('');
@@ -17,7 +18,10 @@ const Page2 = () => {
     };
 
     return (
+        <div>
+            <Navbar workflowName = 'workflowName'/>
         <div className="container">
+            
             <h2>Input JSON Data</h2>
             <textarea 
                 value={jsonInput}
@@ -32,6 +36,7 @@ const Page2 = () => {
                 Submit
             </button>
             {message && <p className="message">{message}</p>}
+        </div>
         </div>
     );
 };
